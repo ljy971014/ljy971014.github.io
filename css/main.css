@@ -39,12 +39,21 @@ width: 70vw;
   height: auto;
   width: 50px;
   padding-bottom:2%;
+    margin-left: 72%;
+    margin-top:3% ;
+}
+
+.mobile {
+  text-align: center;
+  margin-left:5px;
+  margin-top:35px ;
 }
 
 .mobile2{
 margin:5%;
 padding-top:3%;
 }
+
 
 .fixed{
   width: 52vw;
@@ -321,12 +330,6 @@ ul li .descr::before {
 
 }
 
-@media screen and (min-width: 768px) {
-  .indicator {
-      margin-left: 72%;
-      margin-top:3% ;
-  }
-}
 
 @media screen and (max-width: 767px) {
 h5{
@@ -341,9 +344,10 @@ h5{
 
   .indicator {
       margin-top: 120%;
-      height: 90px;
+      height: auto;
       width: 90vw;
       text-align: center;
+      margin-left:0%;
   }
   .bigcontainer{
     height: 100vw;
@@ -376,7 +380,7 @@ h5{
 }
 
 .mobile{
-  margin:0%;
+  margin-top:2%;
 }
 
 }
