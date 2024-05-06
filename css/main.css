@@ -343,19 +343,19 @@ h5{
   }
 
   .indicator {
-      margin-top: 120%;
+      margin-top: 160%;
       height: auto;
       width: 90vw;
       text-align: center;
       margin-left:0%;
   }
   .bigcontainer{
-    height: 100vw;
+    height: 150vw;
     width: 90vw;
     }
 
 .fixed{
-    height: 70vw;
+    height: 120vw;
     width:90vw;
     margin-left: 0vw;
     margin-top: 30vw;
@@ -382,6 +382,7 @@ h5{
 .mobile{
   margin-top:2%;
 }
+
 .fa-xl{
   font-size:12px;
 }
