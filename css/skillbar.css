@@ -349,7 +349,7 @@ border-radius: 30px;
 		ul li .descr {
 			padding-block-end: 1.5rem;
 			padding: 5% 0% 10% 0%;
-			font-size: smaller;
+			font-size: medium;
 		  }
 	
 	ul li .date {
@@ -370,7 +370,7 @@ border-radius: 30px;
 		border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 	  }
 	
-	  h2{
+	  h3{
     font-size:large;
 	padding-top: 2%;
 	font-weight:bolder;
@@ -382,7 +382,7 @@ border-radius: 30px;
 	}
 
 	.descr{
-		width:200px;
+		width:250px;
 	   }
 	}
 }
