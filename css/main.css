@@ -1,5 +1,6 @@
 h3{
   font-family: "Bricolage Grotesque";
+  font-size: larger;
 }
 
 button{
@@ -37,6 +38,7 @@ padding-left: 0;
   -webkit-backdrop-filter: blur(5px);
   height:100%;
   overflow: scroll;
+  
   }
 
   * {
@@ -57,7 +59,8 @@ padding-left: 0;
     width: 40px;
     text-align: center;
     padding-top: 10px;
-    margin-left:110%;
+    right:100px;
+  
   }
 
   .avatar{
@@ -66,11 +69,12 @@ padding-left: 0;
    
   @media only screen and (max-width : 667px) {
     .container{
-      padding-left: 7%;
+     padding:auto;
+     padding-left:5%;
     }
 
     .glasscontainer {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(254, 254, 254, 0.1);
       border-radius: 36px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
@@ -79,16 +83,19 @@ padding-left: 0;
       height: 75vh;
       width: 95vw;
       position: relative;
+      margin-top:5%;
       }
 
     .glasscontainer-main{
-      background: rgba(11, 11, 11, 0.2);
-      border-radius: 26px;
+      background: rgba(3, 4, 4, 0.2);
+      border-radius: 36px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
-      height: 67.3333333%;
-      margin-top:0;
+      height: 67%;
+      bottom:0;
+      position:fixed;
+      padding-top:5%;
       }
 
       .panel{
@@ -102,6 +109,7 @@ padding-left: 0;
         margin:10%;
         text-align: center;
         float:none;
+        right:auto;
       }
 
       .icon {
@@ -110,7 +118,7 @@ padding-left: 0;
       }
 
      .avatar{
-      width:200px;
+      width:230px;
      }
 
      p{
@@ -120,6 +128,10 @@ padding-left: 0;
 
      h4{
       font-size: large;
-      padding:5% 0% 0% 0%;
+      padding:2% 0% 0% 0%;
+     }
+
+     .summary-mobile{
+      width:100%;
      }
   }
