@@ -58,7 +58,7 @@ border-radius: 30px;
 .bar .progress-line span{
 	height: 100%;
 	width: 80%;
-	background: #60eeee;
+	background: #8fcfcf;
 	position: absolute;
 	border-radius: 10px;
 	transform: scaleX(0);
@@ -272,7 +272,7 @@ border-radius: 30px;
 	}
 	ul li .title {
 	  overflow: hidden;
-	  padding-block-start: 2rem;
+	  padding-block-start: 0rem;
 	  padding-block-end: 1rem;
 	  font-weight: 500;
 	}
