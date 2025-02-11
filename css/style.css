@@ -23,7 +23,7 @@
     padding-top: 5vw;
     z-index: 1;
     background-image: 
-      linear-gradient(rgba(234, 147, 215,0.5), #8fc4f3f2);cv 
+      linear-gradient(rgba(21, 11, 68, 0.5), #9ec2e7f2);cv 
     background-position: bottom center;
   }
   
@@ -51,20 +51,6 @@
     mix-blend-mode: overlay;
   }
   
-  h1 {
-    border-color: aliceblue;
-    font-size: 12vw;
-    font-weight: 100;
-    font-family: "Dancing Script", cursive;
-    margin: 0 auto 15px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      35deg,
-      var(--color-primary),
-      var(--color-secondary)
-    );
-  }
   
   h2{
     text-align: center;
@@ -85,3 +71,6 @@
     text-align: center;
     color: white;
   }
+
+
+
