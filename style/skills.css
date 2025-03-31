@@ -1,216 +1,247 @@
 /* Reset */
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
+.artboard {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  height: 100%;
+  position: relative;
+}
+
+@media (max-width: 37.5em) {
   .artboard {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem;
-    height: 100%;
-    position: relative;
+    padding: 1rem;
+    flex-flow: wrap;
   }
-  @media (max-width: 37.5em) {
-    .artboard {
-      padding: 1rem;
-      flex-flow:wrap;
-    }
-  }
+}
+
+.skillcard {
+  min-height: 60vh;
+  flex: initial;
+  position: relative;
+  height: 52rem;
+  width: 48rem;
+  -moz-perspective: 200rem;
+  perspective: 200rem;
+  margin: 2rem;
+}
+
+.skillcard__side {
+  height: 52rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  /* We don't want to see the back part of the element. */
+  backface-visibility: hidden;
+  /* We don't want to see the back part of the element. */
+  border-radius: 3px;
+  overflow: hidden;
+  /* The image is overflowing the parent. */
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+}
+
+.skillcard__side--front {
+  background-image: linear-gradient(to right bottom, rgba(30, 11, 54, 0.65), rgba(86, 37, 132, 0.7)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+}
+
+.skillcard__side--back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.skillcard:hover .skillcard__side--back {
+  transform: rotateY(0);
+}
+
+.skillcard:hover .skillcard__side--front {
+  transform: rotateY(-180deg);
+}
+
+.skillcard__theme {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 54%;
+  width: 90%;
+  text-align: center;
+}
+
+.skillcard__theme-box {
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.skillcard__subject {
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 0.8rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.skillcard__title {
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 100;
+}
+
+.skillcard__cover {
+  position: relative;
+  background-size: cover;
+  height: 14rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(160, 55, 202, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+}
+
+.skillcard__heading {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+.skillcard__heading-span {
+  font-family: "VT323", monospace;
+  font-size: 3.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  color: #fff;
+}
+
+.skillcard__details {
+  font-family: "Inconsolata", monospace;
+  padding: 2rem 0rem;
+}
+
+.skillcard__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skillcard__details ul li {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+.skillcard__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+@media only screen and (max-width: 37.5em),
+only screen and (hover: none) {
   .skillcard {
-    min-height: 60vh;
-    flex: initial;
-    position: relative;
-    height: 52rem;
-    width: 48rem;
-    -moz-perspective: 200rem;
-    perspective: 200rem;
-    margin: 2rem;
-  }
-  .skillcard__side {
-    height: 52rem;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    /* We don't want to see the back part of the element. */
-    backface-visibility: hidden;
-    /* We don't want to see the back part of the element. */
-    border-radius: 3px;
-    overflow: hidden;
-    /* The image is overflowing the parent. */
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
-  }
-  .skillcard__side--front {
-    background-image: linear-gradient(to right bottom, rgba(30, 11, 54, 0.65), rgba(86, 37, 132, 0.7)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
-  }
-  .skillcard__side--back {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 0;
     background-color: #fff;
-    transform: rotateY(180deg);
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    perspective: none;
+    height:100%;
   }
-  .skillcard:hover .skillcard__side--back {
-    transform: rotateY(0);
+
+  .skillcard__side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    transform: none !important;
+    backface-visibility: visible;
+    margin-bottom: 2rem;
+
   }
-  .skillcard:hover .skillcard__side--front {
-    transform: rotateY(-180deg);
+
+  .skillcard__side--front {
+    clip-path: none;
+    border-radius: 0;
+    padding-top: 4rem;
+    background-attachment: fixed;
+    display: none;
   }
+
+  .skillcard__side--back {
+    transform: none !important;
+    
+  }
+
+  .skillcard__cover {
+    height: 20vh;
+    clip-path: none;
+    border-radius: 0;
+    position: relative;
+  }
+
   .skillcard__theme {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 54%;
-    width: 90%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    padding: 2rem;
     text-align: center;
   }
-  .skillcard__theme-box {
-    color: #fff;
-    margin-bottom: 8rem;
-  }
-  .skillcard__subject {
-    font-family: "Inconsolata", monospace;
-    letter-spacing: 0.8rem;
-    font-size: 1.6rem;
-    text-transform: uppercase;
+
+  .skillcard__title {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
-  .skillcard__title {
-    font-family: "VT323", monospace;
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-weight: 100;
+
+  .skillcard__subject {
+    letter-spacing: 0.2rem;
+    font-size: 0.4rem;
   }
-  .skillcard__cover {
-    position: relative;
-    background-size: cover;
-    height: 14rem;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(160, 55, 202, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
-  }
-  .skillcard__heading {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-  }
-  .skillcard__heading-span {
-    font-family: "VT323", monospace;
-    font-size: 4.2rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    padding: 1rem 1.5rem;
-    color: #fff;
-  }
+
   .skillcard__details {
-    font-family: "Inconsolata", monospace;
-    padding: 4rem 2rem;
+    padding: 0.23rem;
+    font-size: 0.4rem !important;
   }
+
   .skillcard__details ul {
-    list-style: none;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    font-size: 0.4rem;
+    margin-top:15%;
   }
+
+  .skillcard__heading {
+    top: 40%;
+    left: 0%;
+    transform: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .skillcard__heading-span {
+    font-size: 1.5rem;
+  }
+
   .skillcard__details ul li {
     text-align: center;
-    font-size: 1.8rem;
-    padding: 1rem;
+    font-size: 1.2rem;
+   
   }
-  .skillcard__details ul li:not(:last-child) {
-    border-bottom: 1px solid #eee;
-  }
-  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
-    .skillcard {
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-      border-radius: 0;
-      background-color: #fff;
-      box-shadow: none;
-      margin: 0;
-      width: 100%;
-      perspective: none;
-    }
-  
-    .skillcard__side {
-      height: auto;
-      position: relative;
-      box-shadow: none;
-      transform: none !important;
-      backface-visibility: visible;
-      margin-bottom: 2rem;
-      
-    }
-  
-    .skillcard__side--front {
-      clip-path: none;
-      border-radius: 0;
-      padding-top: 4rem;
-      background-attachment: fixed;
-      display: none;
-    }
-  
-    .skillcard__side--back {
-      transform: none !important;
-      padding: 2rem;
-    }
-  
-    .skillcard__cover {
-      height: 20vh;
-      clip-path: none;
-      border-radius: 0;
-      position: relative;
-    }
-  
-    .skillcard__theme {
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none;
-      width: 100%;
-      padding: 2rem;
-      text-align: center;
-    }
-  
-    .skillcard__title {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-  
-    .skillcard__subject {
-      letter-spacing: 0.3rem;
-      font-size: 1.4rem;
-    }
-  
-    .skillcard__details {
-      padding: 2rem;
-    }
-  
-    .skillcard__details ul {
-      width: 100%;
-    }
-  
-    .skillcard__heading {
-    top: 40%;
-    left:0%
-      transform: none;
-      width:100%;
-      text-align:center ;
-    }
-  
-    .skillcard__heading-span {
-      font-size: 3rem;
-            }
-  }
-  
+}
