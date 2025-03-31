@@ -1,19 +1,23 @@
-body {
-
+html {
     height: auto;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090A0F 100%);
+  }
+  
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;   /* Allow vertical scroll */
+    min-height: 100vh;
+    background-color: transparent;
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    overflow: hidden;
-}
+  }
 
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
-    body {
-        overflow: auto; /* or overflow-y: scroll */
-        height: auto;
-        min-height: 100vh; /* Ensures full height */
-    }
+    html, body {
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+      }
 }
 
 
@@ -151,12 +155,11 @@ a{
 
 
 /*Background effects */
+#stars, #stars2, #stars3 {
+    position: fixed; /* Keep them fixed in the background */
+    z-index: -1;     /* Send them behind other content */
+  }
 
-html {
-    height: 100%;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090A0F 100%);
-    overflow: hidden; }
-  
   #stars {
     width: 1px;
     height: 1px;
