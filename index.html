@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="timeline.css">
-    <link rel="stylesheet" href="progressbar.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/timeline.css">
+    <link rel="stylesheet" href="style/progressbar.css">
+    <link rel="stylesheet" href="style/skills.css">
     <script src="https://kit.fontawesome.com/99915b2394.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
 </head>
@@ -17,15 +18,15 @@
     <div id="stars3"></div>
     <div class="container">
         <div class="row mt-5 m-1">
-            <div class="col-md-2 m-2 grid-item item-row1 hover-zoom" style="background-color: #FFF7F3;color:#C599B6; padding:0%; overflow: hidden;object-position: center;"><img src="Oreo.png" class="responsive-image" alt="mypuppy"></div>
-            <a href="#" class="pink col-md-4 m-2 grid-item item-row1 hover-zoom text-center" onclick="showCard('personal-info')">Personal Information</a>
+            <div class="col-md-2 m-2 grid-item item-row1 hover-zoom"><img src="Oreo.png" class="responsive-image" alt="mypuppy"><img src="oreoparis.png" class="m-image" style="width:200px; margin-left:40%;" alt=""></div>
+             <a href="#" class="pink col-md-4 m-2 grid-item item-row1 hover-zoom text-center" onclick="showCard('personal-info')">Personal Information</a>
             <a href="#" class="pink col-md-5 m-2 grid-item item-row1 hover-zoom" onclick="showCard('experience')">Experience</a>
         </div>
         
         <div class="row m-1">
-           <div class="pink2 col-md-2 m-2 grid-item item-row2 hover-zoom" > <a href="#"  onclick="showCard('skills')">Skills<img src="pawprint_8182992.png" width="20px"></a>
+           <div class="pink2 col-md-2 m-2 grid-item item-row2 hover-zoom" > <a href="#"  onclick="showCard('skills')">Skills<img src="pawprint_8182992.png" class="mobile-img"></a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="padding-right: 0%;">
                 <a href="#" class="pink2 mt-2 grid-item hover-zoom" style="height:240px;" onclick="showCard('language')">Language</a>
                 <a href="#" class="pink mt-3 grid-item hover-zoom" style="height:240px;" onclick="showCard('details')">Hobby</a>
             </div>
@@ -155,16 +156,78 @@
     'skills': {
         title: 'Skills',
         description: `
-            <ul>
-                <li>English</li>
-                <li>Spanish</li>
-            </ul>
+<div class="artboard">
+ <div class="skillcard">
+
+  <div class="skillcard__side skillcard__side--back">
+   <div class="skillcard__cover">
+    <h4 class="skillcard__heading">
+     <span class="skillcard__heading-span">Essential soft skills</span>
+    </h4>
+   </div>
+   <div class="skillcard__details">
+    <ul>
+     <li>Problem Solving</li>
+     <li>Time Management</li>
+     <li>Teamwork/Supporting</li>
+     <li>Flexibility</li>
+     <li>Responsibility</li>
+     <li>Empathy</li>
+     <li>Attention to Detail</li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="skillcard__side skillcard__side--front">
+   <div class="skillcard__theme">
+    <div class="skillcard__theme-box">
+     <p class="skillcard__subject"><i class="fa-solid fa-hexagon-nodes fa-2xl" style="color: #ffffff;"></i></p>
+     <p class="skillcard__title">Soft Skills</p>
+    </div>
+   </div>
+  </div>
+
+ </div>
+
+ <div class="skillcard">
+
+  <div class="skillcard__side skillcard__side--back">
+   <div class="skillcard__cover">
+    <h4 class="skillcard__heading">
+     <span class="skillcard__heading-span">Essential hard skills</span>
+    </h4>
+   </div>
+   <div class="skillcard__details">
+    <ul>
+     <li>HTML/CSS/JS</li>
+     <li>SEO/SEM Marketing</li>
+     <li>AI chatbots</li>
+     <li>BI Tools & Automation</li>
+     <li>Foreign Language</li>
+     <li>Data Analysis</li>
+     <li>Banner Designing</li>
+    
+    </ul>
+   </div>
+  </div>
+
+  <div class="skillcard__side skillcard__side--front">
+   <div class="skillcard__theme">
+    <div class="skillcard__theme-box">
+     <p class="skillcard__subject"><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ffffff;"></i></p>
+     <p class="skillcard__title">Hard Skills</p>
+    </div>
+   </div>
+  </div>
+
+ </div>
+</div>
         `
     },
     'language': {
         title: 'Language',
         description: `
- <ul id="skill">
+ <ul id="language">
 	<li><span class="bar English"></span><h5>English</h5></li>
 	<li><span class="bar Chinese"></span><h5>Chinese</h5></li>
 	<li><span class="bar Japanese"></span><h5>Japanese</h5></li>
