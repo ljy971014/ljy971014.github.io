@@ -72,6 +72,12 @@ a{
     display:none;
 }
 
+.m-sp-size{
+    height:240px;
+    margin-right:10px;
+  }
+
+
 @media (max-width: 768px) {
     .responsive-image {
        display:none;
@@ -83,6 +89,7 @@ a{
         width: 200px;
     }
 }
+
 
 
 /* Card popup styling */
@@ -119,14 +126,19 @@ a{
     }
     
     .item-row2{
-        height:250px;
+        height:150px;
         width:95vw;
     }
 
     .mobile-img{
         height: 50px;
     }
-  
+    
+    .m-sp-size{
+        height:150px;
+        margin-right:0;
+        width:375px;
+      }
     
 }
 
