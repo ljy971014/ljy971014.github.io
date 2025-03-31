@@ -244,4 +244,8 @@ only screen and (hover: none) {
     font-size: 1.2rem;
    
   }
+
+  ul{
+    padding-left:0;
+  }
 }
