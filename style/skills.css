@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
- 
+
 
   .artboard {
     display: flex;
@@ -94,7 +94,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(96, 32, 121, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+    background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(160, 55, 202, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
   }
   .skillcard__heading {
     text-align: center;
