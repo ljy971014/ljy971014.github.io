@@ -122,7 +122,6 @@
 }
 
 .skillcard__heading-span {
-  font-family: "VT323", monospace;
   font-size: 3.2rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -131,7 +130,7 @@
 }
 
 .skillcard__details {
-  font-family: "Inconsolata", monospace;
+ 
   padding: 2rem 0rem;
 }
 
