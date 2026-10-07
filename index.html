@@ -3,535 +3,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Lim ✦ Portfolio</title>
 
-    <title>Julia Lim | Portfolio</title>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/99915b2394.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Decorative background -->
-    <div class="background">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="orb orb-three"></div>
-        <div class="stars"></div>
+
+    <!-- Dreamy night background -->
+    <div class="night-sky" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="moon-glow"></div>
+        <div class="stars stars-small"></div>
+        <div class="stars stars-medium"></div>
+        <div class="stars stars-large"></div>
+        <div class="nebula nebula-one"></div>
+        <div class="nebula nebula-two"></div>
+        <span class="sparkle s1">✦</span>
+        <span class="sparkle s2">✧</span>
+        <span class="sparkle s3">✦</span>
+        <span class="sparkle s4">✧</span>
+        <span class="sparkle s5">✦</span>
     </div>
 
-    <main class="portfolio">
+    <main class="site">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <div class="brand">
+                <span class="brand-mark">✦</span>
+                <span>JULIA LIM</span>
+            </div>
+
+            <div class="header-note">
+                <span class="status-dot"></span>
+                little things about me
+            </div>
+        </header>
 
         <!-- HERO -->
         <section class="hero">
             <div class="hero-copy">
-                <span class="eyebrow">
-                    <span class="eyebrow-dot"></span>
-                    Welcome to my little corner of the internet
-                </span>
+                <div class="eyebrow">
+                    <span>WELCOME</span>
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
 
-                <h1>Julia <span>Lim</span></h1>
+                <h1>
+                    Hello,<br>
+                    I'm <em>Julia.</em>
+                </h1>
 
-                <p class="hero-description">
-                    Digital marketing, operations, customer experience,
-                    creativity — and a little bit of everything in between.
+                <p>
+                    A curious creative who loves turning ideas into experiences,
+                    learning new things, and finding a little magic in everyday life.
                 </p>
 
-                <div class="hero-tags">
-                    <span>Digital Marketing</span>
-                    <span>Operations</span>
-                    <span>Creative</span>
+                <div class="hero-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Conway, Arkansas</span>
+                    <span><i class="fa-regular fa-heart"></i> Dog mom &amp; dreamer</span>
                 </div>
             </div>
 
-            <button class="hero-photo" onclick="showCard('personal-info')" aria-label="Open personal information">
-                <div class="photo-glow"></div>
-                <img src="Oreo.png" alt="Oreo, Julia's puppy">
-                <span class="photo-badge">
+            <button class="portrait-frame" onclick="showCard('personal-info')" aria-label="Open about me">
+                <div class="portrait-rings"></div>
+                <div class="portrait">
+                    <img src="oreoparis.png" alt="Julia Lim">
+                </div>
+                <div class="portrait-tag">
                     <i class="fa-solid fa-heart"></i>
-                </span>
+                    <span>that's me</span>
+                </div>
+                <div class="portrait-sparkle">✦</div>
             </button>
         </section>
 
-        <!-- NAVIGATION GRID -->
-        <section class="portfolio-grid" aria-label="Portfolio sections">
+        <!-- INTERACTIVE CONSTELLATION -->
+        <section class="constellation" aria-label="Explore my portfolio">
 
-            <button class="portfolio-card about-card" onclick="showCard('personal-info')">
-                <span class="card-number">01</span>
-                <span class="card-icon"><i class="fa-regular fa-user"></i></span>
-                <span class="card-copy">
-                    <small>GET TO KNOW ME</small>
-                    <strong>About Me</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+            <div class="section-heading">
+                <span class="section-kicker">EXPLORE</span>
+                <h2>A few pieces of my world</h2>
+                <p>Click a constellation to discover more.</p>
+            </div>
 
-            <button class="portfolio-card experience-card" onclick="showCard('experience')">
-                <span class="card-number">02</span>
-                <span class="card-icon"><i class="fa-solid fa-briefcase"></i></span>
-                <span class="card-copy">
-                    <small>MY JOURNEY</small>
+            <div class="constellation-line line-one"></div>
+            <div class="constellation-line line-two"></div>
+            <div class="constellation-line line-three"></div>
+
+            <div class="card-grid">
+
+                <button class="magic-card about" onclick="showCard('personal-info')">
+                    <span class="card-star">✦</span>
+                    <span class="card-icon"><i class="fa-regular fa-user"></i></span>
+                    <span class="card-label">01 · ABOUT</span>
+                    <strong>Personal<br>Information</strong>
+                    <span class="card-hint">discover me <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+
+                <button class="magic-card experience" onclick="showCard('experience')">
+                    <span class="card-star">✧</span>
+                    <span class="card-icon"><i class="fa-solid fa-route"></i></span>
+                    <span class="card-label">02 · JOURNEY</span>
                     <strong>Experience</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+                    <span class="card-hint">my journey <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
 
-            <button class="portfolio-card skills-card" onclick="showCard('skills')">
-                <span class="card-number">03</span>
-                <span class="card-icon"><i class="fa-solid fa-sparkles"></i></span>
-                <span class="card-copy">
-                    <small>WHAT I CAN DO</small>
+                <button class="magic-card skills" onclick="showCard('skills')">
+                    <span class="card-star">✦</span>
+                    <span class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                    <span class="card-label">03 · ABILITIES</span>
                     <strong>Skills</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+                    <span class="card-hint">my toolkit <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
 
-            <button class="portfolio-card language-card" onclick="showCard('language')">
-                <span class="card-number">04</span>
-                <span class="card-icon"><i class="fa-solid fa-language"></i></span>
-                <span class="card-copy">
-                    <small>COMMUNICATION</small>
+                <button class="magic-card language" onclick="showCard('language')">
+                    <span class="card-star">✧</span>
+                    <span class="card-icon"><i class="fa-solid fa-language"></i></span>
+                    <span class="card-label">04 · VOICES</span>
                     <strong>Languages</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+                    <span class="card-hint">how I communicate <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
 
-            <button class="portfolio-card hobby-card" onclick="showCard('details')">
-                <span class="card-number">05</span>
-                <span class="card-icon"><i class="fa-regular fa-heart"></i></span>
-                <span class="card-copy">
-                    <small>BEYOND WORK</small>
+                <button class="magic-card hobby" onclick="showCard('details')">
+                    <span class="card-star">✦</span>
+                    <span class="card-icon"><i class="fa-regular fa-heart"></i></span>
+                    <span class="card-label">05 · OFF DUTY</span>
                     <strong>Hobbies</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+                    <span class="card-hint">things I love <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
 
-            <button class="portfolio-card pictures-card" onclick="showCard('pictures')">
-                <span class="card-number">06</span>
-                <span class="card-icon"><i class="fa-regular fa-images"></i></span>
-                <span class="card-copy">
-                    <small>LITTLE MOMENTS</small>
+                <button class="magic-card pictures" onclick="showCard('pictures')">
+                    <span class="card-star">✧</span>
+                    <span class="card-icon"><i class="fa-regular fa-images"></i></span>
+                    <span class="card-label">06 · MEMORIES</span>
                     <strong>Pictures</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+                    <span class="card-hint">little moments <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
 
-            <button class="portfolio-card connect-card" onclick="showCard('connect')">
-                <span class="card-number">07</span>
-                <span class="card-icon"><i class="fa-regular fa-paper-plane"></i></span>
-                <span class="card-copy">
-                    <small>LET'S TALK</small>
-                    <strong>Connect</strong>
-                </span>
-                <span class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </button>
+                <button class="magic-card connect" onclick="showCard('connect')">
+                    <span class="card-star">✦</span>
+                    <span class="card-icon"><i class="fa-regular fa-paper-plane"></i></span>
+                    <span class="card-label">07 · CONTACT</span>
+                    <strong>Connect<br>with me</strong>
+                    <span class="card-hint">say hello <i class="fa-solid fa-arrow-right"></i></span>
+                </button>
 
+            </div>
         </section>
 
         <footer>
-            <span>Made with curiosity &amp; a little sparkle</span>
-            <span>© <span id="year"></span> Julia Lim</span>
+            <div><span class="footer-star">✦</span> made with a little magic</div>
+            <div>© <span id="year"></span> Julia Lim</div>
         </footer>
+
     </main>
 
-    <!-- MODAL -->
-    <div class="modal-overlay" id="overlay" onclick="hideCard()">
-        <div class="modal" id="card" role="dialog" aria-modal="true" aria-labelledby="card-title" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="hideCard()" aria-label="Close">
+    <!-- POPUP -->
+    <div class="overlay" id="overlay" onclick="hideCard()">
+        <div class="popup" id="card" onclick="event.stopPropagation()" role="dialog" aria-modal="true">
+
+            <button class="close-button" onclick="hideCard()" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <div class="modal-header">
-                <span class="modal-label">EXPLORE</span>
+            <div class="popup-decoration">✦　✧　✦</div>
+
+            <div class="popup-header">
+                <span>✦ EXPLORE</span>
                 <h2 id="card-title">Title</h2>
-                <div class="modal-line"></div>
+                <div class="title-ornament"><span></span> ✦ <span></span></div>
             </div>
 
-            <div class="modal-body" id="card-description"></div>
+            <div id="card-description"></div>
         </div>
     </div>
 
-    <script>
-        const cardContent = {
+<script>
+const cardContent = {
 
-            "personal-info": {
-                title: "About Me",
-                description: `
-                    <div class="profile">
-                        <div class="profile-photo">
-                            <img src="oreoparis.png" alt="Julia Lim">
-                        </div>
+    "personal-info": {
+        title: "About Me",
+        description: `
+            <div class="about-layout">
+                <div class="about-photo">
+                    <div class="photo-frame-glow"></div>
+                    <img src="oreoparis.png" alt="Julia Lim">
+                    <span>✦</span>
+                </div>
 
-                        <div class="profile-intro">
-                            <span class="mini-label">HELLO, I'M</span>
-                            <h3>Julia Lim Jia Yee</h3>
-                            <p>
-                                A curious and adaptable professional with experience
-                                across customer relations, e-commerce, operations,
-                                and digital marketing.
-                            </p>
-                        </div>
+                <div class="about-copy">
+                    <span class="content-kicker">A LITTLE ABOUT ME</span>
+                    <h3>Julia Lim Jia Yee</h3>
+                    <p>
+                        I'm someone who enjoys learning, creating, solving problems,
+                        and connecting with people. My experience has taken me through
+                        customer relations, e-commerce, operations, and digital marketing.
+                    </p>
 
-                        <div class="profile-facts">
-                            <div>
-                                <span class="fact-icon"><i class="fa-regular fa-calendar"></i></span>
-                                <div>
-                                    <small>Birthday</small>
-                                    <strong>14 Oct 1997</strong>
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="fact-icon"><i class="fa-solid fa-location-dot"></i></span>
-                                <div>
-                                    <small>Based in</small>
-                                    <strong>Conway, AR</strong>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="social-links">
-                            <a href="https://www.instagram.com/julia.jy14/" target="_blank" rel="noopener" aria-label="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/julia.lim.5855" target="_blank" rel="noopener" aria-label="Facebook">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/julia-lim-b32570244/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                `
-            },
-
-            "experience": {
-                title: "Experience",
-                description: `
-                    <div class="timeline">
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">OCT 2015</div>
-                            <div class="timeline-content">
-                                <span class="timeline-type">VOLUNTEER</span>
-                                <h3>SPCA Selangor</h3>
-                                <p>
-                                    Volunteered in SPCA Selangor, Malaysia while
-                                    waiting for my university entrance.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">AUG 2018</div>
-                            <div class="timeline-content">
-                                <span class="timeline-type">SUMMER INTERNSHIP</span>
-                                <h3>Research &amp; Analysis</h3>
-                                <p>
-                                    My first internship experience during my 2nd year.
-                                    Conducted research for a company at the request
-                                    of the government.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">OCT 2019</div>
-                            <div class="timeline-content">
-                                <span class="timeline-type">INTERNSHIP</span>
-                                <h3>Mitsubishi Fuso Truck &amp; Bus</h3>
-                                <p>
-                                    Completed a six-month internship as a product
-                                    controller, learning key aspects of product
-                                    management and operations.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">APR 2021</div>
-                            <div class="timeline-content">
-                                <span class="timeline-type">E-COMMERCE OPERATOR</span>
-                                <h3>E-commerce Operations</h3>
-                                <p>
-                                    Managed an online store while continuously
-                                    improving processes, operations, and customer
-                                    experience.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">JUNE 2023</div>
-                            <div class="timeline-content">
-                                <span class="timeline-type">GLOBAL OPERATIONS</span>
-                                <h3>VPN Project Management</h3>
-                                <p>
-                                    Led migration management for a VPN project for
-                                    nine months until successful completion, then
-                                    transitioned into sub-management roles for
-                                    additional projects.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">SEP 2024</div>
-                            <div class="timeline-content">
-                                <span class="timeline-type">DIGITAL MARKETING</span>
-                                <h3>Digital Marketing Strategy</h3>
-                                <p>
-                                    Developed and led digital marketing strategies,
-                                    managing a team to increase brand awareness,
-                                    website traffic, and leads through SEO, SEM,
-                                    and content marketing.
-                                </p>
-
-                                <div class="achievement">
-                                    <strong>+250%</strong>
-                                    <span>organic traffic increase</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                `
-            },
-
-            "skills": {
-                title: "Skills",
-                description: `
-                    <div class="skills-intro">
-                        <span class="mini-label">MY TOOLKIT</span>
-                        <p>
-                            A mix of people skills, technical abilities, creativity,
-                            and analytical thinking.
-                        </p>
+                    <div class="info-chips">
+                        <div><i class="fa-regular fa-calendar"></i><span><small>Born</small>14 Oct 1997</span></div>
+                        <div><i class="fa-solid fa-location-dot"></i><span><small>Currently</small>Conway, AR</span></div>
                     </div>
 
-                    <div class="skills-grid">
-
-                        <div class="skill-panel">
-                            <div class="skill-panel-header">
-                                <div class="skill-panel-icon">
-                                    <i class="fa-solid fa-people-group"></i>
-                                </div>
-                                <div>
-                                    <span>01</span>
-                                    <h3>Soft Skills</h3>
-                                </div>
-                            </div>
-
-                            <div class="skill-list">
-                                <span>Problem Solving</span>
-                                <span>Time Management</span>
-                                <span>Teamwork</span>
-                                <span>Flexibility</span>
-                                <span>Responsibility</span>
-                                <span>Empathy</span>
-                                <span>Attention to Detail</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-panel featured">
-                            <div class="skill-panel-header">
-                                <div class="skill-panel-icon">
-                                    <i class="fa-solid fa-code"></i>
-                                </div>
-                                <div>
-                                    <span>02</span>
-                                    <h3>Hard Skills</h3>
-                                </div>
-                            </div>
-
-                            <div class="skill-list">
-                                <span>HTML / CSS / JS</span>
-                                <span>SEO / SEM Marketing</span>
-                                <span>AI Chatbots</span>
-                                <span>BI Tools &amp; Automation</span>
-                                <span>Foreign Language</span>
-                                <span>Data Analysis</span>
-                                <span>Banner Designing</span>
-                            </div>
-                        </div>
-
+                    <div class="social-row">
+                        <a href="https://www.instagram.com/julia.jy14/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/julia.lim.5855" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/julia-lim-b32570244/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
-                `
-            },
+                </div>
+            </div>
+        `
+    },
 
-            "language": {
-                title: "Languages",
-                description: `
-                    <div class="language-list">
+    "experience": {
+        title: "Experience",
+        description: `
+            <div class="timeline-new">
 
-                        <div class="language-row">
-                            <div class="language-heading">
-                                <strong>English</strong>
-                                <span>Fluent</span>
-                            </div>
-                            <div class="language-track">
-                                <span class="language-fill english"></span>
-                            </div>
-                        </div>
-
-                        <div class="language-row">
-                            <div class="language-heading">
-                                <strong>Chinese</strong>
-                                <span>Fluent</span>
-                            </div>
-                            <div class="language-track">
-                                <span class="language-fill chinese"></span>
-                            </div>
-                        </div>
-
-                        <div class="language-row">
-                            <div class="language-heading">
-                                <strong>Japanese</strong>
-                                <span>Working proficiency</span>
-                            </div>
-                            <div class="language-track">
-                                <span class="language-fill japanese"></span>
-                            </div>
-                        </div>
-
-                        <div class="language-row">
-                            <div class="language-heading">
-                                <strong>Malay</strong>
-                                <span>Fluent</span>
-                            </div>
-                            <div class="language-track">
-                                <span class="language-fill malay"></span>
-                            </div>
-                        </div>
-
+                <div class="timeline-entry">
+                    <div class="timeline-date">OCT<br><b>2015</b></div>
+                    <div class="timeline-node">✦</div>
+                    <div class="timeline-box">
+                        <span>VOLUNTEER</span>
+                        <h3>SPCA Selangor</h3>
+                        <p>Volunteered in SPCA Selangor, Malaysia while waiting for my university entrance.</p>
                     </div>
-                `
-            },
+                </div>
 
-            "details": {
-                title: "Hobbies",
-                description: `
-                    <div class="empty-section">
-                        <div class="empty-icon">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <span class="mini-label">BEYOND WORK</span>
-                        <h3>A little more about me</h3>
-                        <p>
-                            This section is ready for your hobbies, interests,
-                            favorite games, travel stories, pets, or anything
-                            else you'd like visitors to discover.
-                        </p>
+                <div class="timeline-entry">
+                    <div class="timeline-date">AUG<br><b>2018</b></div>
+                    <div class="timeline-node">✦</div>
+                    <div class="timeline-box">
+                        <span>SUMMER INTERNSHIP</span>
+                        <h3>Research &amp; Analysis</h3>
+                        <p>My first internship experience during my 2nd year. Conducted research for a company requested by government.</p>
                     </div>
-                `
-            },
+                </div>
 
-            "pictures": {
-                title: "Pictures",
-                description: `
-                    <div class="empty-section">
-                        <div class="empty-icon">
-                            <i class="fa-regular fa-images"></i>
-                        </div>
-                        <span class="mini-label">PHOTO GALLERY</span>
-                        <h3>Little moments</h3>
-                        <p>
-                            Add your favorite photos here. You can turn this into
-                            a proper gallery later with image cards and a lightbox.
-                        </p>
+                <div class="timeline-entry">
+                    <div class="timeline-date">OCT<br><b>2019</b></div>
+                    <div class="timeline-node">✦</div>
+                    <div class="timeline-box">
+                        <span>INTERNSHIP</span>
+                        <h3>Mitsubishi Fuso Truck &amp; Bus</h3>
+                        <p>Completed a six-month internship as a product controller, learning vital aspects of product management and operations.</p>
                     </div>
-                `
-            },
+                </div>
 
-            "connect": {
-                title: "Connect",
-                description: `
-                    <div class="connect-section">
-                        <span class="mini-label">LET'S CONNECT</span>
-                        <h3>I'd love to hear from you.</h3>
-                        <p>
-                            Whether it's about work, collaboration, creative ideas,
-                            or simply saying hello — feel free to reach out.
-                        </p>
-
-                        <div class="connect-links">
-                            <a href="https://www.linkedin.com/in/julia-lim-b32570244/" target="_blank" rel="noopener">
-                                <span><i class="fa-brands fa-linkedin-in"></i></span>
-                                <div>
-                                    <small>PROFESSIONAL</small>
-                                    <strong>LinkedIn</strong>
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                            <a href="https://www.instagram.com/julia.jy14/" target="_blank" rel="noopener">
-                                <span><i class="fa-brands fa-instagram"></i></span>
-                                <div>
-                                    <small>SOCIAL</small>
-                                    <strong>Instagram</strong>
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                            <a href="https://www.facebook.com/julia.lim.5855" target="_blank" rel="noopener">
-                                <span><i class="fa-brands fa-facebook-f"></i></span>
-                                <div>
-                                    <small>SOCIAL</small>
-                                    <strong>Facebook</strong>
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
+                <div class="timeline-entry">
+                    <div class="timeline-date">APR<br><b>2021</b></div>
+                    <div class="timeline-node">✦</div>
+                    <div class="timeline-box">
+                        <span>E-COMMERCE OPERATOR</span>
+                        <h3>E-commerce Operations</h3>
+                        <p>Managed an online store while continuously learning, improving processes, and elevating customer experience.</p>
                     </div>
-                `
-            }
-        };
+                </div>
 
-        const overlay = document.getElementById("overlay");
-        const card = document.getElementById("card");
-        const title = document.getElementById("card-title");
-        const description = document.getElementById("card-description");
+                <div class="timeline-entry">
+                    <div class="timeline-date">JUN<br><b>2023</b></div>
+                    <div class="timeline-node">✦</div>
+                    <div class="timeline-box">
+                        <span>GLOBAL OPERATIONS</span>
+                        <h3>VPN Project Management</h3>
+                        <p>Led migration management for a VPN project for nine months until successful completion, then moved into sub-management roles for additional projects.</p>
+                    </div>
+                </div>
 
-        function showCard(id) {
-            const content = cardContent[id];
+                <div class="timeline-entry featured-entry">
+                    <div class="timeline-date">SEP<br><b>2024</b></div>
+                    <div class="timeline-node">✦</div>
+                    <div class="timeline-box">
+                        <span>DIGITAL MARKETING</span>
+                        <h3>Digital Marketing Strategy</h3>
+                        <p>Developed and led digital marketing strategies, managing a team to increase brand awareness, website traffic, and leads through SEO, SEM, and content marketing.</p>
+                        <div class="achievement-badge"><b>250%</b><small>increase in organic traffic</small></div>
+                    </div>
+                </div>
 
-            if (!content) return;
+            </div>
+        `
+    },
 
-            title.textContent = content.title;
-            description.innerHTML = content.description;
+    "skills": {
+        title: "Skills",
+        description: `
+            <div class="skills-intro-new">
+                <span>MY TOOLKIT</span>
+                <p>A balance of people skills, technical abilities, creativity, and analytical thinking.</p>
+            </div>
 
-            overlay.classList.add("active");
-            document.body.classList.add("modal-open");
+            <div class="skill-cards-new">
 
-            setTimeout(() => {
-                document.querySelector(".modal-close").focus();
-            }, 100);
-        }
+                <div class="skill-orb-card">
+                    <div class="skill-orb"><i class="fa-solid fa-people-group"></i></div>
+                    <span>01</span>
+                    <h3>Soft Skills</h3>
+                    <div class="pill-list">
+                        <b>Problem Solving</b>
+                        <b>Time Management</b>
+                        <b>Teamwork</b>
+                        <b>Flexibility</b>
+                        <b>Responsibility</b>
+                        <b>Empathy</b>
+                        <b>Attention to Detail</b>
+                    </div>
+                </div>
 
-        function hideCard() {
-            overlay.classList.remove("active");
-            document.body.classList.remove("modal-open");
-        }
+                <div class="skill-orb-card featured-skill">
+                    <div class="skill-orb"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <span>02</span>
+                    <h3>Hard Skills</h3>
+                    <div class="pill-list">
+                        <b>HTML / CSS / JS</b>
+                        <b>SEO / SEM Marketing</b>
+                        <b>AI Chatbots</b>
+                        <b>BI Tools &amp; Automation</b>
+                        <b>Foreign Language</b>
+                        <b>Data Analysis</b>
+                        <b>Banner Designing</b>
+                    </div>
+                </div>
 
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                hideCard();
-            }
-        });
+            </div>
+        `
+    },
 
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    "language": {
+        title: "Languages",
+        description: `
+            <div class="language-intro">
+                <span>THE LANGUAGES I SPEAK</span>
+                <p>Different languages, different ways to connect.</p>
+            </div>
+
+            <div class="language-bars">
+
+                <div class="language-item">
+                    <div><b>English</b><span>Fluent</span></div>
+                    <div class="bar"><i style="--level:95%"></i></div>
+                </div>
+
+                <div class="language-item">
+                    <div><b>Chinese</b><span>Fluent</span></div>
+                    <div class="bar"><i style="--level:95%"></i></div>
+                </div>
+
+                <div class="language-item">
+                    <div><b>Japanese</b><span>Working proficiency</span></div>
+                    <div class="bar"><i style="--level:78%"></i></div>
+                </div>
+
+                <div class="language-item">
+                    <div><b>Malay</b><span>Fluent</span></div>
+                    <div class="bar"><i style="--level:95%"></i></div>
+                </div>
+
+            </div>
+        `
+    },
+
+    "details": {
+        title: "Hobbies",
+        description: `
+            <div class="coming-section">
+                <div class="big-sparkle">✦</div>
+                <span>OFF THE CLOCK</span>
+                <h3>Things that make me happy</h3>
+                <p>
+                    This space is ready for your hobbies, favorite games,
+                    travel memories, pets, creative projects, or anything
+                    else you want people to know about you.
+                </p>
+                <div class="floating-hearts">♡　✦　♡　✧　♡</div>
+            </div>
+        `
+    },
+
+    "pictures": {
+        title: "Pictures",
+        description: `
+            <div class="coming-section">
+                <div class="big-sparkle"><i class="fa-regular fa-images"></i></div>
+                <span>LITTLE MOMENTS</span>
+                <h3>Your photo gallery</h3>
+                <p>
+                    Add your favorite photos here and this can become a
+                    dreamy image gallery with clickable pictures.
+                </p>
+                <div class="floating-hearts">✧　✦　✧　✦　✧</div>
+            </div>
+        `
+    },
+
+    "connect": {
+        title: "Connect",
+        description: `
+            <div class="connect-new">
+                <span>LET'S SAY HELLO</span>
+                <h3>Find me around the internet.</h3>
+                <p>Whether it's work, collaboration, creative ideas, or simply saying hello.</p>
+
+                <div class="connect-list">
+
+                    <a href="https://www.linkedin.com/in/julia-lim-b32570244/" target="_blank" rel="noopener">
+                        <span class="connect-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+                        <div><small>PROFESSIONAL</small><b>LinkedIn</b></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/julia.jy14/" target="_blank" rel="noopener">
+                        <span class="connect-icon"><i class="fa-brands fa-instagram"></i></span>
+                        <div><small>SOCIAL</small><b>Instagram</b></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/julia.lim.5855" target="_blank" rel="noopener">
+                        <span class="connect-icon"><i class="fa-brands fa-facebook-f"></i></span>
+                        <div><small>SOCIAL</small><b>Facebook</b></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+            </div>
+        `
+    }
+};
+
+function showCard(id) {
+    const content = cardContent[id];
+    if (!content) return;
+
+    document.getElementById("card-title").textContent = content.title;
+    document.getElementById("card-description").innerHTML = content.description;
+    document.getElementById("overlay").classList.add("active");
+    document.body.classList.add("modal-open");
+}
+
+function hideCard() {
+    document.getElementById("overlay").classList.remove("active");
+    document.body.classList.remove("modal-open");
+}
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") hideCard();
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
